@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAROJERSEY — Authentic Moroccan Sportswear</title>
+<meta name="description" content="Custom Moroccan sportswear — soccer jerseys, tracksuits, and polos made to your team's colors, names, and numbers. Order directly on WhatsApp." />
+<link rel="icon" href="/images/logo-mark.png" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0A0A08',
+          surface: '#141510',
+          surface2: '#1C1D16',
+          line: 'rgba(209,188,131,0.14)',
+          paper: '#F3EFE4',
+          muted: '#A6A090',
+          green: '#1E6B42',
+          greendeep: '#123B24',
+          gold: '#D1BC83',
+          maroon: '#9C1826',
+        },
+        fontFamily: {
+          display: ['"Playfair Display"', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-display { font-family: '"Playfair Display"', serif; }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #0A0A08; }
+  ::-webkit-scrollbar-thumb { background: #2A2A20; border-radius: 8px; }
+
+  body.modal-open { overflow: hidden; }
+
+  [data-modal-panel] { transition: transform 220ms cubic-bezier(.2,.8,.2,1), opacity 220ms ease; }
+
+  .filter-pill[data-active="true"] {
+    background-color: #F3EFE4;
+    color: #0A0A08;
+  }
+
+  @keyframes pulse-bg {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .skeleton { animation: pulse-bg 1.6s ease-in-out infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
+  }
+
+  :focus-visible {
+    outline: 2px solid #D1BC83;
+    outline-offset: 2px;
+  }
+</style>
+</head>
+
+<body class="bg-ink text-paper font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-40 bg-ink/90 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="/images/logo-mark.png" alt="MAROJERSEY emblem" class="w-10 h-10 shrink-0" />
+      <span class="leading-tight">
+        <span class="block font-display font-bold text-lg text-maroon tracking-wide">MAROJERSEY</span>
+        <span class="hidden sm:block text-[10px] tracking-[0.18em] text-gold">AUTHENTIC MOROCCAN SPORTSWEAR</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
+      <a href="#catalog" class="hover:text-paper transition-colors">Catalog</a>
+      <a href="#how-it-works" class="hover:text-paper transition-colors">How it works</a>
+    </nav>
+    <a href="#catalog" class="inline-flex items-center gap-2 rounded-full bg-paper text-ink text-sm font-semibold px-4 py-2 hover:bg-white transition-colors">
+      Browse catalog
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <p class="text-sm text-gold font-semibold mb-4">Custom sportswear, made in Moroccan colors</p>
+      <h1 class="font-display font-bold text-4xl sm:text-6xl leading-[1.05] mb-6">
+        Kit up your squad, exactly your way.
+      </h1>
+      <p class="text-muted text-base sm:text-lg max-w-xl mb-8">
+        Soccer jerseys, tracksuits, and polos built in your team's colors, with your names and
+        numbers. Pick a style below and send your order straight to us on WhatsApp.
+      </p>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="#catalog" class="inline-flex items-center gap-2 rounded-full bg-maroon text-paper font-semibold px-6 py-3 hover:bg-maroon/90 transition-colors">
+          Browse the catalog
+        </a>
+        <a href="#how-it-works" class="inline-flex items-center gap-2 rounded-full border border-line text-paper font-semibold px-6 py-3 hover:border-gold/50 transition-colors">
+          How ordering works
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-3 mt-10">
+        <span class="text-xs text-muted border border-line rounded-full px-3 py-1.5">Free design mockup</span>
+        <span class="text-xs text-muted border border-line rounded-full px-3 py-1.5">Bulk team orders</span>
+        <span class="text-xs text-muted border border-line rounded-full px-3 py-1.5">48–72h turnaround</span>
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="grid grid-cols-3 gap-3">
+        <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden border border-line aspect-[4/5]">
+          <img src="https://placehold.co/700x900/141510/9C1826?text=Jersey" alt="Custom soccer jersey preview" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-line aspect-square">
+          <img src="https://placehold.co/500x500/1C1D16/D1BC83?text=Tracksuit" alt="Custom tracksuit preview" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-line aspect-square">
+          <img src="https://placehold.co/500x500/1C1D16/1E6B42?text=Polo" alt="Custom polo preview" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works" class="border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 grid sm:grid-cols-3 gap-8">
+    <div>
+      <h3 class="font-semibold text-lg mb-2">Pick a style</h3>
+      <p class="text-muted text-sm leading-relaxed">Browse jerseys, tracksuits, and polos, then open the one that fits your team.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg mb-2">Add your notes</h3>
+      <p class="text-muted text-sm leading-relaxed">Tell us your sizes, colors, and any names or numbers on the product page.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg mb-2">Order on WhatsApp</h3>
+      <p class="text-muted text-sm leading-relaxed">One tap sends your order to us — we confirm details and pricing directly with you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATALOG ============ -->
+<section id="catalog" class="max-w-7xl mx-auto px-5 sm:px-8 py-14">
+  <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+    <div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl">The catalog</h2>
+      <p class="text-muted text-sm mt-2">Loaded live from the site's content — updates as soon as a product is published.</p>
+    </div>
+  </div>
+
+  <!-- Category Filter Tabs -->
+  <div id="filter-tabs" class="flex flex-wrap gap-2 mb-10" role="tablist" aria-label="Filter products by category">
+    <button type="button" data-filter="all" data-active="true" class="filter-pill rounded-full border border-line text-sm font-medium px-4 py-2 text-paper transition-colors" role="tab" aria-selected="true">All</button>
+    <button type="button" data-filter="jerseys" data-active="false" class="filter-pill rounded-full border border-line text-sm font-medium px-4 py-2 text-muted transition-colors" role="tab" aria-selected="false">Jerseys</button>
+    <button type="button" data-filter="tracksuits" data-active="false" class="filter-pill rounded-full border border-line text-sm font-medium px-4 py-2 text-muted transition-colors" role="tab" aria-selected="false">Tracksuits</button>
+    <button type="button" data-filter="polos" data-active="false" class="filter-pill rounded-full border border-line text-sm font-medium px-4 py-2 text-muted transition-colors" role="tab" aria-selected="false">Polos</button>
+  </div>
+
+  <!-- Loading skeleton -->
+  <div id="loading-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+
+  <!-- Product Grid -->
+  <div id="product-grid" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+
+  <p id="empty-state" class="hidden text-muted text-sm text-center py-16"></p>
+  <div id="error-state" class="hidden text-center py-16">
+    <p class="text-sm text-muted max-w-md mx-auto"></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="/images/logo-mark.png" alt="MAROJERSEY emblem" class="w-9 h-9 shrink-0" />
+      <div>
+        <p class="font-display font-bold text-sm text-maroon tracking-wide">MAROJERSEY</p>
+        <p class="text-xs text-muted">Authentic Moroccan sportswear, made to order</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="/admin/" class="text-xs text-muted hover:text-paper transition-colors">Content admin</a>
+      <p class="text-xs text-muted">© <span id="year"></span> Marojersey.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ PRODUCT DETAIL MODAL ============ -->
+<div
+  id="product-modal"
+  class="hidden fixed inset-0 z-50 items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+>
+  <div data-modal-panel class="w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-surface border border-line rounded-2xl grid md:grid-cols-2 opacity-0 scale-95">
+    <div class="relative">
+      <button type="button" data-modal-close aria-label="Close product details" class="absolute top-3 right-3 md:hidden w-9 h-9 rounded-full bg-ink/70 flex items-center justify-center text-paper">&times;</button>
+      <img id="modal-image" src="" alt="" class="w-full h-64 md:h-full object-cover md:rounded-l-2xl bg-surface2" />
+    </div>
+    <div class="p-6 sm:p-8 relative">
+      <button type="button" data-modal-close aria-label="Close product details" class="hidden md:flex absolute top-6 right-6 w-9 h-9 rounded-full border border-line items-center justify-center text-muted hover:text-paper hover:border-gold/40 transition-colors">&times;</button>
+
+      <span id="modal-tag" class="inline-block text-xs font-semibold rounded-full px-3 py-1 ring-1 mb-4"></span>
+      <h3 id="modal-title" class="font-display font-bold text-2xl sm:text-3xl mb-2 pr-10"></h3>
+      <p id="modal-price" class="text-sm text-muted mb-4"></p>
+      <p id="modal-description" class="text-sm text-muted leading-relaxed mb-6"></p>
+
+      <label class="text-sm block mb-6">
+        <span class="block text-muted mb-1.5">Size, colors, name & number (optional)</span>
+        <input id="modal-personalization" type="text" placeholder="e.g. Size M, RONALDO 7" class="w-full bg-surface2 border border-line rounded-lg px-3 py-2 text-sm text-paper placeholder:text-muted/60 focus:border-gold outline-none" />
+      </label>
+
+      <a id="modal-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-ink font-semibold px-6 py-3 hover:bg-[#25D366]/90 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.73 13.42L3 21l3.68-1.28a8.9 8.9 0 0 0 4.37 1.15h.01a8.94 8.94 0 0 0 8.93-8.93 8.86 8.86 0 0 0-2.39-6.62Zm-5.55 13.7h-.01a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.43 7.43 0 1 1 6.1 3.24Zm4.08-5.56c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.57.73-.7.88-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.08-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.6.28-.2.22-.79.77-.79 1.87s.81 2.17.92 2.32c.11.15 1.6 2.45 3.89 3.43.54.24.97.38 1.3.48.55.17 1.04.15 1.44.09.44-.07 1.32-.54 1.5-1.06.19-.52.19-.97.13-1.06-.06-.09-.2-.15-.42-.26Z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ============================================================
+     CONFIG — edit these for your repository
+     ============================================================ */
+  const GITHUB_OWNER  = 'your-username';   // GitHub username or org
+  const GITHUB_REPO   = 'your-repo-name';  // repository name
+  const GITHUB_BRANCH = 'main';            // branch Decap CMS commits to
+  const WHATSAPP_NUMBER = '15551234567';   // international format, digits only, no +
+
+  const PRODUCTS_PATH = '_products';
+
+  /* ============================================================
+     CATEGORY METADATA
+     ============================================================ */
+  const CATEGORY_META = {
+    jerseys:    { label: 'Jerseys',    tagClass: 'text-maroon bg-maroon/10 ring-maroon/30' },
+    tracksuits: { label: 'Tracksuits', tagClass: 'text-gold bg-gold/10 ring-gold/30' },
+    polos:      { label: 'Polos',      tagClass: 'text-green bg-green/10 ring-green/30' },
+  };
+
+  const grid = document.getElementById('product-grid');
+  const loadingGrid = document.getElementById('loading-grid');
+  const emptyState = document.getElementById('empty-state');
+  const errorState = document.getElementById('error-state');
+
+  let ALL_PRODUCTS = [];
+  let currentFilter = 'all';
+
+  /* ============================================================
+     HELPERS
+     ============================================================ */
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str ?? '';
+    return div.innerHTML;
+  }
+
+  function resolveImageUrl(path) {
+    if (!path) return 'https://placehold.co/700x900/1C1D16/A6A090?text=No+Image';
+    if (/^https?:\/\//i.test(path)) return path;
+    return path.startsWith('/') ? path : `/${path}`;
+  }
+
+  function showSkeletons(count = 8) {
+    loadingGrid.innerHTML = Array.from({ length: count })
+      .map(
+        () => `
+        <div class="skeleton bg-surface border border-line rounded-2xl overflow-hidden">
+          <div class="aspect-[4/5] bg-surface2"></div>
+          <div class="p-5 space-y-3">
+            <div class="h-4 w-20 bg-surface2 rounded-full"></div>
+            <div class="h-4 w-3/4 bg-surface2 rounded"></div>
+            <div class="h-4 w-1/3 bg-surface2 rounded"></div>
+          </div>
+        </div>`
+      )
+      .join('');
+    loadingGrid.classList.remove('hidden');
+    grid.classList.add('hidden');
+  }
+
+  function hideSkeletons() {
+    loadingGrid.classList.add('hidden');
+    grid.classList.remove('hidden');
+  }
+
+  /* ============================================================
+     FETCH PRODUCTS FROM _products/ VIA THE GITHUB API
+     Each product is one JSON file committed there by Decap CMS.
+     This reads the live repository directly, so newly published
+     products appear without any separate build step.
+     ============================================================ */
+  async function fetchProducts() {
+    const listUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${PRODUCTS_PATH}?ref=${GITHUB_BRANCH}`;
+    const listRes = await fetch(listUrl, { headers: { Accept: 'application/vnd.github+json' } });
+
+    if (!listRes.ok) {
+      if (listRes.status === 404) return []; // folder doesn't exist yet — no products published
+      throw new Error(`GitHub API error (${listRes.status})`);
+    }
+
+    const files = await listRes.json();
+    const jsonFiles = Array.isArray(files) ? files.filter((f) => f.name.endsWith('.json')) : [];
+
+    const products = await Promise.all(
+      jsonFiles.map(async (file) => {
+        const res = await fetch(file.download_url);
+        const data = await res.json();
+        return { id: file.name.replace(/\.json$/, ''), ...data };
+      })
+    );
+
+    return products;
+  }
+
+  /* ============================================================
+     RENDER
+     ============================================================ */
+  function productCard(product) {
+    const meta = CATEGORY_META[product.category] || { label: product.category || 'Uncategorized', tagClass: 'text-muted bg-white/5 ring-white/10' };
+    return `
+      <article class="group bg-surface border border-line rounded-2xl overflow-hidden flex flex-col">
+        <div class="aspect-[4/5] overflow-hidden bg-surface2">
+          <img
+            src="${resolveImageUrl(product.image)}"
+            alt="${escapeHtml(product.title)}"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-5 flex flex-col flex-1">
+          <span class="self-start text-xs font-semibold rounded-full px-2.5 py-1 ring-1 mb-3 ${meta.tagClass}">
+            ${escapeHtml(meta.label)}
+          </span>
+          <h3 class="font-semibold text-base mb-1">${escapeHtml(product.title)}</h3>
+          <p class="text-sm text-muted mb-4">${escapeHtml(product.price)}</p>
+          <button
+            type="button"
+            data-open-product="${escapeHtml(product.id)}"
+            class="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-line text-sm font-medium px-4 py-2.5 hover:bg-paper hover:text-ink hover:border-paper transition-colors"
+          >
+            View details
+          </button>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderGrid() {
+    const items = currentFilter === 'all' ? ALL_PRODUCTS : ALL_PRODUCTS.filter((p) => p.category === currentFilter);
+    grid.innerHTML = items.map(productCard).join('');
+
+    if (items.length === 0) {
+      emptyState.textContent =
+        currentFilter === 'all'
+          ? 'No products published yet. Add one from the content admin.'
+          : `No products in "${CATEGORY_META[currentFilter]?.label || currentFilter}" yet.`;
+      emptyState.classList.remove('hidden');
+    } else {
+      emptyState.classList.add('hidden');
+    }
+  }
+
+  /* ============================================================
+     FILTER TABS
+     ============================================================ */
+  const filterTabs = document.getElementById('filter-tabs');
+  filterTabs.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter]');
+    if (!btn) return;
+
+    filterTabs.querySelectorAll('[data-filter]').forEach((el) => {
+      const active = el === btn;
+      el.dataset.active = String(active);
+      el.setAttribute('aria-selected', String(active));
+      el.classList.toggle('text-muted', !active);
+      el.classList.toggle('text-paper', active);
+    });
+
+    currentFilter = btn.dataset.filter;
+    renderGrid();
+  });
+
+  /* ============================================================
+     MODAL
+     ============================================================ */
+  const modal = document.getElementById('product-modal');
+  const modalPanel = modal.querySelector('[data-modal-panel]');
+  const modalImage = document.getElementById('modal-image');
+  const modalTag = document.getElementById('modal-tag');
+  const modalTitle = document.getElementById('modal-title');
+  const modalPrice = document.getElementById('modal-price');
+  const modalDescription = document.getElementById('modal-description');
+  const modalPersonalization = document.getElementById('modal-personalization');
+  const modalWhatsapp = document.getElementById('modal-whatsapp');
+
+  let lastFocusedElement = null;
+
+  function buildWhatsAppLink(product) {
+    const notes = modalPersonalization.value.trim();
+    let text = `Hi MAROJERSEY, I'd like to order:\n`;
+    text += `Product: ${product.title}\n`;
+    text += `Category: ${(CATEGORY_META[product.category] || {}).label || product.category}\n`;
+    text += `Price: ${product.price}\n`;
+    if (notes) text += `Size/Colors/Notes: ${notes}\n`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  }
+
+  function openModal(productId) {
+    const product = ALL_PRODUCTS.find((p) => p.id === productId);
+    if (!product) return;
+
+    const meta = CATEGORY_META[product.category] || { label: product.category || 'Uncategorized', tagClass: 'text-muted bg-white/5 ring-white/10' };
+
+    modalImage.src = resolveImageUrl(product.image);
+    modalImage.alt = product.title;
+    modalTag.textContent = meta.label;
+    modalTag.className = `inline-block text-xs font-semibold rounded-full px-3 py-1 ring-1 mb-4 ${meta.tagClass}`;
+    modalTitle.textContent = product.title;
+    modalPrice.textContent = product.price;
+    modalDescription.textContent = product.description || '';
+    modalPersonalization.value = '';
+
+    modalWhatsapp.href = buildWhatsAppLink(product);
+    modalPersonalization.oninput = () => (modalWhatsapp.href = buildWhatsAppLink(product));
+
+    lastFocusedElement = document.activeElement;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.classList.add('modal-open');
+
+    requestAnimationFrame(() => {
+      modalPanel.classList.remove('opacity-0', 'scale-95');
+      modalPanel.classList.add('opacity-100', 'scale-100');
+    });
+
+    modal.querySelector('[data-modal-close]')?.focus();
+  }
+
+  function closeModal() {
+    modalPanel.classList.add('opacity-0', 'scale-95');
+    modalPanel.classList.remove('opacity-100', 'scale-100');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('modal-open');
+      lastFocusedElement?.focus();
+    }, 180);
+  }
+
+  grid.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-open-product]');
+    if (!btn) return;
+    openModal(btn.dataset.openProduct);
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target.closest('[data-modal-close]')) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+  async function init() {
+    showSkeletons();
+    try {
+      ALL_PRODUCTS = await fetchProducts();
+      hideSkeletons();
+      renderGrid();
+    } catch (err) {
+      hideSkeletons();
+      grid.innerHTML = '';
+      const msg = errorState.querySelector('p');
+      msg.textContent =
+        `Couldn't load products (${err.message}). Check that GITHUB_OWNER / GITHUB_REPO in index.html ` +
+        `match your repository, that it's public, and that _products/ has been created.`;
+      errorState.classList.remove('hidden');
+      console.error(err);
+    }
+  }
+
+  init();
+</script>
+</body>
+</html>
