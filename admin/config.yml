@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: SMIEJMSJ/marojersey-store
   branch: main
 
 media_folder: "images"
