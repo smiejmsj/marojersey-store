@@ -13,6 +13,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Jersey", "Tracksuit", "Polo", "Shorts", "Accessories"] }
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Description", name: "body", widget: "markdown" }
